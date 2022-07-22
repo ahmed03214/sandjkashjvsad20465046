@@ -1,0 +1,17 @@
+.blog {
+  .header .info {
+    text-align: start;
+
+    @media (max-width: 767px) {
+      text-align: center !important;
+    }
+
+    p {
+      width: 100%;
+
+      @media (min-width: 767px) {
+        width: 75% !important;
+      }
+    }
+  }
+}

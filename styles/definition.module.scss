@@ -1,0 +1,17 @@
+.definition {
+  .header .info {
+    text-align: center;
+
+    @media (min-width: 767px) {
+      text-align: start !important;
+    }
+
+    p {
+      width: 100%;
+
+      @media (min-width: 767px) {
+        width: 75% !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.footer {
+  background: linear-gradient(
+    90deg,
+    rgba(86, 86, 212, 1) 46%,
+    rgba(65, 173, 228, 1) 80%
+  );
+  margin-top: 70px;
+
+  .footerTap {
+    opacity: 0.9;
+    transition: 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

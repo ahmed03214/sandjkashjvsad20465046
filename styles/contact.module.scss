@@ -1,0 +1,36 @@
+.contactUs {
+  .header .info {
+    text-align: start;
+
+    @media (max-width: 767px) {
+      text-align: center !important;
+    }
+
+    p {
+      width: 100%;
+
+      @media (min-width: 767px) {
+        width: 75% !important;
+      }
+    }
+  }
+
+  .main .mapContainer {
+    max-width: 800px;
+    margin: auto;
+    border-radius: 7px;
+    overflow: hidden;
+
+    &,
+    .mapParent {
+      width: 100%;
+      height: 280px;
+      border: 12px solid #fff;
+
+      &,
+      & > * {
+        outline: none;
+      }
+    }
+  }
+}

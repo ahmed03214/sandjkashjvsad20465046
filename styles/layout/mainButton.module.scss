@@ -1,0 +1,17 @@
+.mainBtn {
+  background: linear-gradient(
+    90deg,
+    rgba(60, 163, 215, 1) 0%,
+    rgba(225, 30, 110, 1) 80%
+  );
+  color: #fff;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s;
+
+  &:hover {
+    transform: translateY(-6px);
+  }
+}
