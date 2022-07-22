@@ -258,7 +258,7 @@ const Landing = ({ mainData }) => {
             <main>
               <div className={style.mainNet + " flex-start d-block d-md-flex"}>
                 <div
-                  data-aos-offset="400"
+                  data-aos-offset="250"
                   data-aos-duration="500"
                   data-aos="flip-left"
                   className={style.img}
@@ -268,7 +268,7 @@ const Landing = ({ mainData }) => {
 
                 <div
                   data-aos="flip-right"
-                  data-aos-offset="500"
+                  data-aos-offset="250"
                   className="advantages d-block m-auto mt-5 max-w-500"
                 >
                   {advantages2.map((advantage, idx) => (
