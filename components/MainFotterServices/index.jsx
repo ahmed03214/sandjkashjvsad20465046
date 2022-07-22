@@ -3,22 +3,14 @@ import React from "react";
 import { BsWhatsapp } from "react-icons/bs";
 import Button from "../Button";
 
-import { useRouter } from "next/router";
-
 const Phonenumber = process.env.NEXT_PUBLIC_PHONE_NUM;
 
 const MainFotterServices = ({ serviceName }) => {
-  const router = useRouter();
-
   const requestServiceWhatsapp = () => {
     const message = `السلام عليكم, اتكلم معاك بخصوص خدمة ${serviceName}`;
     const whatsappAPI = `https://wa.me/${Phonenumber}?text=${message}`;
 
     window.open(whatsappAPI, "_blanc");
-  };
-
-  const requestServiceContactus = () => {
-    router.push(`/contact?serviceName=${serviceName}`, "/contact");
   };
 
   return (
@@ -30,10 +22,7 @@ const MainFotterServices = ({ serviceName }) => {
         <BsWhatsapp className="mb-1 ms-2" size="25" /> طلب من الواتساب
       </button>
 
-      <Button
-        onClick={requestServiceContactus}
-        className="px-3 py-2 mt-4 d-block"
-      >
+      <Button className="px-3 py-2 mt-4 d-block" requestService={serviceName}>
         اطلب الخدمة الان
       </Button>
     </div>

@@ -43,7 +43,9 @@ const MianCard = ({ body, title, img, bottomImg = false, bg }) => {
                   __html: body,
                 }}
               />
-              <Button className="px-3 py-2 mt-2">اطلب الخدمة الان</Button>
+              <Button requestService={title} className="px-3 py-2 mt-2">
+                اطلب الخدمة الان
+              </Button>
             </div>
           </div>
 

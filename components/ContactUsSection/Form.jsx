@@ -65,7 +65,7 @@ const Form = ({ serviceName = "" }) => {
 
   const getMessage = () => {
     return serviceName
-      ? `السلام عليكم, اتكلم معاك بخصوص خدمة ${serviceName}`
+      ? `السلام عليكم, اتكلم معاك بخصوص خدمة "${serviceName}"`
       : "";
   };
 
