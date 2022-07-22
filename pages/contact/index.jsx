@@ -66,7 +66,7 @@ const Contact = ({ mainData }) => {
             </div>
 
             <ContactUsSection
-              initValue={router.query?.requestService}
+              serviceName={router.query?.serviceName}
               mt="3"
               header={false}
             />

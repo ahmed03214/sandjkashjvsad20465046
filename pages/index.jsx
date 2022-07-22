@@ -265,7 +265,6 @@ const Landing = ({ mainData }) => {
                 >
                   <img src="/assets/landing/advantages-2-icon.webp" alt="" />
                 </div>
-
                 <div
                   data-aos="flip-right"
                   data-aos-offset="250"
