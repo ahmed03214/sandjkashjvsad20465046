@@ -22,7 +22,7 @@ const schema = yup.object({
   phone: yup.string().required("يرجي مليْ كل الحقول"),
 });
 
-const Form = ({ initValue = "" }) => {
+const Form = ({ serviceName = "" }) => {
   const router = useRouter();
 
   const {
@@ -63,6 +63,12 @@ const Form = ({ initValue = "" }) => {
     setRecaptcha(false);
   };
 
+  const getMessage = () => {
+    return serviceName
+      ? `السلام عليكم, اتكلم معاك بخصوص خدمة ${serviceName}`
+      : "";
+  };
+
   return (
     <form
       onSubmit={handleSubmit(sendMessage)}
@@ -92,6 +98,7 @@ const Form = ({ initValue = "" }) => {
           name="topic"
           {...register("topic")}
           placeholder="الموضوع"
+          defaultValue={serviceName ? "طلب خدمة" : ""}
         />
 
         <input
@@ -107,7 +114,7 @@ const Form = ({ initValue = "" }) => {
         name="message"
         {...register("message")}
         placeholder="نص الرسالة"
-        defaultValue={initValue}
+        defaultValue={getMessage()}
       />
 
       <div className="recaptcha d-block mx-auto my-4 w-fit">

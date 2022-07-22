@@ -5,7 +5,7 @@ import Form from "./Form";
 
 // mt = margin top => bootstrap
 const ContactUsSection = ({
-  initValue = "",
+  serviceName = "",
   className = "",
   mt = "5",
   header = true,
@@ -24,7 +24,7 @@ const ContactUsSection = ({
           </header>
         )}
 
-        <Form initValue={initValue} />
+        <Form serviceName={serviceName} />
       </div>
     </section>
   );

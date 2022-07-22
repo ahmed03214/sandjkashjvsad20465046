@@ -18,9 +18,7 @@ const MainFotterServices = ({ serviceName }) => {
   };
 
   const requestServiceContactus = () => {
-    const message = `السلام عليكم, اتكلم معاك بخصوص خدمة ${serviceName}`;
-
-    router.push(`/contact?requestService=${message}`, "/contact");
+    router.push(`/contact?serviceName=${serviceName}`, "/contact");
   };
 
   return (
