@@ -47,8 +47,8 @@ const Blog = ({ mainData }) => {
         <div className="container py-5">
           <header className={`pt-5 pb-4 mt-5 flex-center ${style.header}`}>
             <div className={`${style.info}`}>
-              <h2>المدونة</h2>
-              <p className="small text-muted">
+              <h2 className="font-bold">المدونة</h2>
+              <p className="text-muted">
                 لأننا نؤمن أن وجود إستراتيجية تسويقية صحيحة أم ٌر هام، إذ من
                 خلالها يمكن رسم خريطة الوصول إلى تحقيق النجاح وإزدهار الأعمال
               </p>

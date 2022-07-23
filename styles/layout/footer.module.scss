@@ -1,17 +1,56 @@
 .footer {
-  background: linear-gradient(
-    90deg,
-    rgba(86, 86, 212, 1) 46%,
-    rgba(65, 173, 228, 1) 80%
-  );
+  position: relative;
   margin-top: 70px;
+  overflow: hidden;
+  padding-bottom: 70px;
+  padding-top: 4rem;
 
-  .footerTap {
-    opacity: 0.9;
-    transition: 0.2s;
+  .backDrop {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(86, 86, 212, 0.8) 46%,
+      rgba(65, 173, 228, 0.8) 80%
+    );
 
-    &:hover {
-      opacity: 1;
+    .mainColor {
+      width: 100%;
+      height: 100%;
+      background-image: url("../../public/assets/footer/footer-bg.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .waterMark {
+    position: absolute;
+    right: 37px;
+    top: 180px;
+    z-index: 99;
+
+    img {
+      width: 300px;
+    }
+  }
+
+  .mainFooter {
+    z-index: 99;
+
+    & * {
+      z-index: 99;
+      position: relative;
+    }
+
+    .footerTap {
+      opacity: 0.9;
+      transition: 0.2s;
+
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 }

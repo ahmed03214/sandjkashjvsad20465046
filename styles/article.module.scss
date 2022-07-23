@@ -16,7 +16,7 @@ $main-color: #b84a85;
     }
 
     .lineOfBody {
-      @include cutlines(1);
+      @include cutlines(2);
       font-weight: 550;
     }
 
@@ -30,7 +30,7 @@ $main-color: #b84a85;
       background-color: #fff;
 
       .img {
-        max-height: 350px;
+        max-height: 450px;
         overflow: hidden;
 
         img {

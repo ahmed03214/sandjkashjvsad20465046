@@ -57,7 +57,7 @@ const Article = ({ mainData, article }) => {
         </div>
 
         <div className="container py-5">
-          <header className={`pt-4 pb-4 ${style.header}`}>
+          <header className={`pt-4 pb-4 mt-4 ${style.header}`}>
             <div
               className={`${style.back} flex-center justify-content-start gap-1`}
             >
@@ -71,18 +71,24 @@ const Article = ({ mainData, article }) => {
             </div>
 
             <div className="bottom mt-4">
-              <p className="display-6 mb-1">{article.title}</p>
+              <p className="display-6 mb-2 font-bold fw-bold">
+                {article.title}
+              </p>
 
-              <p
-                dangerouslySetInnerHTML={{ __html: article.article }}
-                className={`text-muted mb-4 ${style.lineOfBody}`}
-              />
-              <p className={`${style.date} small pt-2`}>{article.date}</p>
+              <div className={`mb-4`}>
+                <p className={`${style.lineOfBody}`}>
+                  {/* Get description without html tags */}
+                  {article.article
+                    .replace(/<\/?[^>]+(>|$)/g, " ")
+                    .replace(/(&)[a-z]+;/g, " ")}
+                </p>
+              </div>
+              <p className={`${style.date} pt-2`}>{article.date}</p>
             </div>
           </header>
 
           <main>
-            <article className={`${style.body} border rounded`}>
+            <article className={`${style.body} mx-md-3`}>
               <div className={`${style.img} mb-4`}>
                 <img
                   draggable={false}
@@ -95,19 +101,19 @@ const Article = ({ mainData, article }) => {
               <div className="container">
                 <p
                   style={{ backgroundColor: "#B84A85" }}
-                  className={`${style.hash} rounded px-3 py-1 mb-4`}
+                  className={`${style.hash} rounded px-3 py-1 pt-2 mb-4`}
                 >
                   {article.hash}
                 </p>
 
                 <article
-                  className="mb-3 px-3"
+                  className="mb-3 px-3 font-bold fw-bold lh-lg"
                   dangerouslySetInnerHTML={{ __html: article.article }}
                 />
               </div>
             </article>
 
-            <footer className="flex-between align-items-center px-2 pt-3">
+            <footer className="mx-md-3 px-md-4 flex-between align-items-center px-2 pt-3">
               <p className="fw-bold m-0">شارك الخبر</p>
               <article className={`${style.shareBox} flex-center`}>
                 <ul className="list-unstyled m-0 w-fit flex-center gap-3 px-2 py-1 rounded">

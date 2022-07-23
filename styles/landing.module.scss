@@ -42,19 +42,21 @@
 
     .backDropImgs {
       img {
-        width: 600px;
+        width: 900px;
         position: absolute;
-        opacity: 0.6;
       }
 
       img:nth-of-type(1) {
-        right: -200px;
+        right: -450px;
+        bottom: -80px;
       }
 
       img:nth-of-type(2) {
         left: -200px;
         top: -150px;
+        opacity: 0.6;
       }
+
       z-index: -5;
     }
 
@@ -117,13 +119,14 @@
         border-radius: 50%;
         background-color: #e74152;
         position: absolute;
-        right: -20%;
-        top: -80%;
-        z-index: 99;
+        right: -217px;
+        top: -382px;
+        z-index: 130;
+        display: block;
       }
 
       .logoIcon {
-        width: 300px;
+        width: 550px;
         position: absolute;
         right: 150px;
         top: 45%;
@@ -174,6 +177,10 @@
 
   .advantagesSection {
     header {
+      width: 100%;
+      max-width: 700px;
+      margin: auto;
+
       h2 {
         display: flex;
         justify-content: center;
@@ -183,7 +190,7 @@
         &::before {
           content: "";
           background-image: url("../public/assets/landing/selection-icon.webp");
-          height: 42px;
+          height: 62px;
           width: 42px;
           transform: scale(0.8);
           background-repeat: no-repeat;
