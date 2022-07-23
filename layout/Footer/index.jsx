@@ -14,34 +14,55 @@ import {
 } from "react-icons/ai";
 
 const taps = [
-  [
-    {
-      title: "الرئيسية",
-      route: "/",
-    },
-    {
-      title: "خدمتنا",
-      route: "/services",
-    },
-    {
-      title: "من نحن",
-      route: "/definition",
-    },
-  ],
-  [
-    {
-      title: "المدونة",
-      route: "/blog",
-    },
-    {
-      title: "تواصل معنا",
-      route: "/contact",
-    },
-    {
-      title: "انضم الينا",
-      route: "/join",
-    },
-  ],
+  {
+    title: "تصفح",
+    taps: [
+      {
+        title: "الرئيسية",
+        route: "/",
+      },
+      {
+        title: "خدمتنا",
+        route: "/services",
+      },
+      {
+        title: "من نحن",
+        route: "/definition",
+      },
+    ],
+  },
+
+  {
+    title: "تصفح",
+    taps: [
+      {
+        title: "المدونة",
+        route: "/blog",
+      },
+      {
+        title: "تواصل معنا",
+        route: "/contact",
+      },
+      {
+        title: "انضم الينا",
+        route: "/join",
+      },
+    ],
+  },
+
+  {
+    title: "المزيد",
+    taps: [
+      {
+        title: "شروط الاستخدام",
+        route: "/terms-of-use",
+      },
+      {
+        title: "سياسة الخصوصية",
+        route: "/privacy-policy",
+      },
+    ],
+  },
 ];
 
 const Footer = ({ social }) => {
@@ -55,13 +76,21 @@ const Footer = ({ social }) => {
   ]);
 
   return (
-    <footer className={style.footer + " pt-5"}>
-      <div className="container">
+    <footer className={style.footer}>
+      <div className={style.waterMark}>
+        <img src="/assets/footer/back-drop-logo.webp" alt="" />
+      </div>
+
+      <div className={style.backDrop}>
+        <div className={style.mainColor}></div>
+      </div>
+
+      <div className={`container ${style.mainFooter}`}>
         <div className="taps flex-between flex-column gap-md-0 gap-4 flex-md-row">
           <div className="logo w-75">
-            <img width={160} src="/assets/footer/logo.webp" alt="" />
+            <img width={220} src="/assets/footer/logo.webp" alt="" />
 
-            <div className="socialTaps mt-4 d-flex gap-2">
+            <div className="socialTaps mb-3 mt-4 d-flex gap-2">
               {socialTaps.map(({ Icon, link }, idx) => (
                 <a
                   target="_blanc"
@@ -69,16 +98,18 @@ const Footer = ({ social }) => {
                   key={idx}
                   className={`icon ${style.footerTap} text-light me-1`}
                 >
-                  <Icon size={20} />
+                  <Icon size={26} />
                 </a>
               ))}
             </div>
           </div>
 
-          <div className="taps flex-between w-100">
+          <div className="taps flex-wrap flex-between w-100">
             {taps.map((list, idx) => (
               <ul key={idx} className={`tap${idx + 1}`}>
-                {list.map(({ title, route }, idx) => (
+                <p className="w-fit me-3 text-light">{list.title}</p>
+
+                {list.taps.map(({ title, route }, idx) => (
                   <Link key={idx} href={route}>
                     <li
                       className={`${style.footerTap} w-fit list-unstyled me-3 cu-pointer mb-3 text-light`}
@@ -92,7 +123,7 @@ const Footer = ({ social }) => {
           </div>
         </div>
 
-        <p className="text-light text-center m-0 small pb-3">
+        <p className="text-light text-center m-0 mt-5 pb-3">
           جميع الحقوق محفوظه لدي يمناك 2022©
         </p>
       </div>
