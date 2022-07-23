@@ -128,7 +128,7 @@ const Join = ({ mainData }) => {
           <header className={`pt-5 pb-4 mt-5 flex-center ${style.header}`}>
             <div className={`${style.info}`}>
               <h2>انضم الينا</h2>
-              <p className="small text-muted">
+              <p className="text-muted">
                 لأننا نؤمن أن وجود إستراتيجية تسويقية صحيحة أم ٌر هام، إذ من
                 خلالها يمكن رسم خريطة الوصول إلى تحقيق النجاح وإزدهار الأعمال
               </p>

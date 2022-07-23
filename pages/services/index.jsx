@@ -34,7 +34,7 @@ const Services = ({ mainData }) => {
           <header className={`py-5 mt-5 flex-center ${style.header}`}>
             <div className={`${style.info}`}>
               <h2>خدماتنا</h2>
-              <p className="small text-muted">
+              <p className="text-muted">
                 لأننا نؤمن أن وجود إستراتيجية تسويقية صحيحة أم ٌر هام، إذ من
                 خلالها يمكن رسم خريطة الوصول إلى تحقيق النجاح وإزدهار الأعمال
               </p>
@@ -46,17 +46,25 @@ const Services = ({ mainData }) => {
           </header>
 
           <main className={`${style.main}`}>
-            <h2 className="mb-3">ماذا سنقدم لك في يمناك</h2>
+            <h2 className="mb-4 font-bold">ماذا سنقدم لك في يمناك</h2>
 
-            <div className={`${style.gridNet}`}>
+            <div className="row">
               {mainData.services.map((service, idx) => (
-                <ServiceCard
+                <div
                   key={idx}
-                  id={service.id}
-                  name={service.name}
-                  desc={service.des}
-                  className="border"
-                />
+                  className={`${
+                    idx === 2 || idx === 3 || idx === 4
+                      ? "col-md-4"
+                      : "col-md-6"
+                  }`}
+                >
+                  <ServiceCard
+                    id={service.id}
+                    name={service.name}
+                    desc={service.des}
+                    className="my-3"
+                  />
+                </div>
               ))}
             </div>
           </main>

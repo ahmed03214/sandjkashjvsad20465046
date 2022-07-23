@@ -103,15 +103,15 @@ const Landing = ({ mainData }) => {
                 data-aos-duration="800"
                 className={`${style.info}`}
               >
-                <h2>
+                <p className="display-6 font-bold">
                   نمنح المشاريع الناشئة والمشاريع المتعثرة حياة طويلة وأملا
                   جديدا ونموا متواصلا
-                </h2>
-                <p className="text-muted">
+                </p>
+                <p className="text-muted fs-5">
                   لأننا نؤمن أن وجود إستراتيجية تسويقية صحيحة أم ٌر هام، إذ من
                   خلالها يمكن رسم خريطة الوصول إلى تحقيق النجاح وإزدهار الأعمال
                 </p>
-                <Button onClick={scrollToSecoundSection} className="px-4 py-2">
+                <Button onClick={scrollToSecoundSection} className="px-5 py-2">
                   ابدء الان
                 </Button>
               </div>
@@ -130,7 +130,10 @@ const Landing = ({ mainData }) => {
           </main>
         </section>
 
-        <section ref={secoundSection} className={style.servicesSection}>
+        <section
+          ref={secoundSection}
+          className={style.servicesSection + " min-h-110vh flex-center"}
+        >
           <div className={style.backDrop}>
             <img
               className={style.whiteCurve}
@@ -145,7 +148,7 @@ const Landing = ({ mainData }) => {
             />
           </div>
           <main
-            className={`${style.main} container py-5 h-100 flex-between align-items-center`}
+            className={`${style.main} gap-3 container py-5 h-100 flex-between align-items-center`}
           >
             <div
               data-aos="fade-left"
@@ -153,7 +156,7 @@ const Landing = ({ mainData }) => {
               className={`info text-light`}
             >
               <h2 className="display-5">خدماتنا</h2>
-              <p className="w-md-75">
+              <p className="fs-5 mb-5 pb-3">
                 لأننا نؤمن أن وجود إستراتيجية تسويقية صحيحة أم ٌر هام، إذ من
                 خلالها يمكن رسم خريطة الوصول إلى تحقيق النجاح وإزدهار الأعمال
               </p>
@@ -166,7 +169,7 @@ const Landing = ({ mainData }) => {
               </Button>
             </div>
 
-            <div className={`${style.serviceCardNet}`}>
+            <div className={`${style.serviceCardNet} gap-4 me-md-5`}>
               {mainData.services.slice(0, 4).map((service, idx) => (
                 <ServiceCard
                   key={idx}
@@ -175,6 +178,7 @@ const Landing = ({ mainData }) => {
                   desc={service.des}
                   dataAos={idx <= 1 ? "flip-left" : "flip-right"}
                   dataAosDuration="500"
+                  className="min-w-280"
                 />
               ))}
             </div>
@@ -184,7 +188,11 @@ const Landing = ({ mainData }) => {
         <section className={style.advantagesSection + " mt-5"}>
           <div className="container">
             <header className="text-center my-4">
-              <h2 data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+              <h2
+                className="display-6"
+                data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom"
+              >
                 ماذا سنقدم لك في يمناك
               </h2>
               <p
@@ -192,12 +200,11 @@ const Landing = ({ mainData }) => {
                 data-aos-anchor="#example-anchor"
                 data-aos-offset="1500"
                 data-aos-duration="500"
-                className="small text-muted px-3"
+                className="text-muted px-3"
               >
                 لدينا فريق عمل من مصممين محترفين، الذين لا نستطيع إلا تسميتهم
                 بالفنانين المبدعين، فنخرج لك بتصاميم لافتة تبقي في ذهن العميل بل
-                وتستمر من خلالهم .ليعلم بها الجميع، فنوفر لك تصميمات إحترافية
-                وبتكلفة مالية مناسبة لك لكي تحظى بتصاميم جذابة وبوقت قياسي
+                وتستمر من خلالهم
               </p>
             </header>
 
@@ -217,15 +224,17 @@ const Landing = ({ mainData }) => {
               <ul className="mt-4">
                 {advantages.map((advantage, idx) => (
                   <div
+                    className="mb-4 text-dark pb-2 m-auto"
                     data-aos="fade-right"
                     data-aos-anchor="#example-anchor"
                     data-aos-duration="500"
                     data-aos-offset="1500"
                     data-aos-delay={`${400 * (idx + 1)}`}
                     key={idx}
+                    style={{ width: "100%", maxWidth: "450px" }}
                   >
-                    <li className="fs-4">{advantage.title}</li>
-                    <p className={`small text-muted ${style.desc}`}>
+                    <li className="fs-2 mb-2">{advantage.title}</li>
+                    <p className={`text-muted ${style.desc}`}>
                       {advantage.desc}
                     </p>
                   </div>
@@ -235,7 +244,11 @@ const Landing = ({ mainData }) => {
           </div>
         </section>
 
-        <section className={style.advantagesSection2 + " mt-3"}>
+        <section
+          className={
+            style.advantagesSection2 + " mt-3 min-h-110vh flex-aligned"
+          }
+        >
           <img
             className={style.whiteCurve}
             src="/assets/landing/white-curve.webp"
