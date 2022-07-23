@@ -34,7 +34,7 @@ const AdsMangement = ({ mainData, service }) => {
 
         <main>
           <div className="sections">
-            <div className={`${style.bodyContainer} rounded border py-4 mt-4`}>
+            <div className={`${style.bodyContainer} rounded shadow py-4 mt-4`}>
               <div className="container">
                 <header>
                   <Heading className="text-center" color="#B84A85">
@@ -63,7 +63,7 @@ const AdsMangement = ({ mainData, service }) => {
               </div>
             </div>
 
-            <div className={`${style.bodyContainer} rounded border py-4 mt-4`}>
+            <div className={`${style.bodyContainer} rounded shadow py-4 mt-4`}>
               <div className="container">
                 <header>
                   <Heading>{service.sections[1].title}</Heading>
@@ -80,7 +80,7 @@ const AdsMangement = ({ mainData, service }) => {
               </div>
             </div>
 
-            <div className={`${style.bodyContainer} rounded border py-4 mt-4`}>
+            <div className={`${style.bodyContainer} rounded shadow py-4 mt-4`}>
               <div className="container">
                 <main>
                   <div className="net flex-center gap-3 align-items-start">
@@ -107,7 +107,7 @@ const AdsMangement = ({ mainData, service }) => {
               </div>
             </div>
 
-            <div className={`${style.bodyContainer} rounded border py-4 mt-4`}>
+            <div className={`${style.bodyContainer} rounded shadow py-4 mt-4`}>
               <div className="container">
                 <header>
                   <h5>{service.sections[3].title}</h5>
@@ -132,7 +132,7 @@ const AdsMangement = ({ mainData, service }) => {
               </div>
             </div>
 
-            <div className={`${style.bodyContainer} rounded border py-4 mt-4`}>
+            <div className={`${style.bodyContainer} rounded shadow py-4 mt-4`}>
               <div className="container">
                 <header>
                   <Heading>{service.sections[4].title}</Heading>
@@ -163,7 +163,7 @@ const AdsMangement = ({ mainData, service }) => {
               </div>
             </div>
 
-            <div className={`${style.bodyContainer} rounded border py-4 mt-4`}>
+            <div className={`${style.bodyContainer} rounded shadow py-4 mt-4`}>
               <div className="container">
                 <main>
                   <div className="net flex-center gap-3 align-items-start">

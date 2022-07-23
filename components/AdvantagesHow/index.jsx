@@ -31,7 +31,7 @@ const AdvantagesHow = ({ className = "", idx, title, desc }) => {
 
   return (
     <div
-      className={`${className} border rounded py-3 px-3 gap-3 mb-3 flex-start text-center`}
+      className={`${className} shadow rounded py-3 px-3 gap-3 mb-3 flex-start text-center`}
     >
       <div className="img flex-center">
         <img

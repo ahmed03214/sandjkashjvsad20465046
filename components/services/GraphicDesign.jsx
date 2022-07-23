@@ -34,7 +34,7 @@ const GraphicDesign = ({ mainData, service }) => {
 
         <main>
           <div className="sections">
-            <div className={`${style.bodyContainer} rounded border py-4 mt-4`}>
+            <div className={`${style.bodyContainer} rounded shadow py-4 mt-4`}>
               <div className="container">
                 <header>
                   <Heading
@@ -75,7 +75,7 @@ const GraphicDesign = ({ mainData, service }) => {
               </div>
             </div>
 
-            <div className={`${style.bodyContainer} rounded border py-4 mt-4`}>
+            <div className={`${style.bodyContainer} rounded shadow py-4 mt-4`}>
               <div className="container">
                 <header>
                   <Heading>{service.sections[1].title}</Heading>
@@ -95,7 +95,7 @@ const GraphicDesign = ({ mainData, service }) => {
               </div>
             </div>
 
-            <div className={`${style.bodyContainer} rounded border py-4 mt-4`}>
+            <div className={`${style.bodyContainer} rounded shadow py-4 mt-4`}>
               <div className="container">
                 <main>
                   <div className="net flex-between align-items-start">
@@ -121,7 +121,7 @@ const GraphicDesign = ({ mainData, service }) => {
               </div>
             </div>
 
-            <div className={`${style.bodyContainer} rounded border py-4 mt-4`}>
+            <div className={`${style.bodyContainer} rounded shadow py-4 mt-4`}>
               <div className="container">
                 <header>
                   <Heading>{service.sections[3].title}</Heading>

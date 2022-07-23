@@ -19,14 +19,14 @@ const ServiceCard = ({
       <article
         data-aos={dataAos}
         data-aos-auration={dataAosDuration}
-        className={`${style.serviceCard} ${className} p-3 cu-pointer`}
+        className={`${style.serviceCard} ${className} py-5 px-3 cu-pointer shadow`}
       >
-        <div className="logo mb-3">
-          <img width={50} src="/assets/landing/service-card-icon.webp" alt="" />
+        <div className="logo mb-4">
+          <img width={70} src="/assets/landing/service-card-icon.webp" alt="" />
         </div>
         <div className="data">
           <p className="name h3 mb-4 text-cut">{name}</p>
-          <p className="description text-cut w-95 text-muted">{desc}</p>
+          <p className="description text-cut-2 w-95 text-muted">{desc}</p>
         </div>
       </article>
     </Link>

@@ -33,7 +33,7 @@ const Writing = ({ mainData, service }) => {
         </header>
 
         <main>
-          <div className={`${style.bodyContainer} rounded border py-4 mt-4`}>
+          <div className={`${style.bodyContainer} rounded shadow py-4 mt-4`}>
             <div className="container">
               {Object.keys(service).map((key, idx) => {
                 if (!idx) return;

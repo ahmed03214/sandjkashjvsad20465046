@@ -33,7 +33,7 @@ const SocialMange = ({ mainData, service }) => {
 
         <main>
           <div className="sections">
-            <div className={`${style.bodyContainer} rounded border py-4 mt-4`}>
+            <div className={`${style.bodyContainer} rounded shadow py-4 mt-4`}>
               <div className="container">
                 <div className="flex-center gap-5">
                   <div className="info">
@@ -58,14 +58,14 @@ const SocialMange = ({ mainData, service }) => {
               </div>
             </div>
 
-            <div className={`${style.bodyContainer} rounded border py-4 mt-4`}>
+            <div className={`${style.bodyContainer} rounded shadow py-4 mt-4`}>
               <div className="container">
                 <h5>{service.sections[1].title}</h5>
                 <p className="text-muted small">{service.sections[1].body} </p>
               </div>
             </div>
 
-            <div className={`${style.bodyContainer} rounded border py-4 mt-4`}>
+            <div className={`${style.bodyContainer} rounded shadow py-4 mt-4`}>
               <div className="container">
                 <div className="flex-center gap-5">
                   <div className="img d-md-flex d-none">
@@ -92,7 +92,7 @@ const SocialMange = ({ mainData, service }) => {
               </div>
             </div>
 
-            <div className={`${style.bodyContainer} rounded border py-4 mt-4`}>
+            <div className={`${style.bodyContainer} rounded shadow py-4 mt-4`}>
               <div className="container">
                 <h5>{service.sections[3].title}</h5>
                 <p className="small text-muted">{service.sections[3].muted}</p>
@@ -101,7 +101,7 @@ const SocialMange = ({ mainData, service }) => {
               </div>
             </div>
 
-            <div className={`${style.bodyContainer} rounded border py-4 mt-4`}>
+            <div className={`${style.bodyContainer} rounded shadow py-4 mt-4`}>
               <div className="container">
                 <h5>{service.sections[4].title}</h5>
                 <p className="small text-muted">{service.sections[4].muted}</p>

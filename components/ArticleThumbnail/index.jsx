@@ -46,7 +46,7 @@ const ArticleThumbnail = ({ idx, id, title, desc, img, hash, date }) => {
 
   return (
     <Link href={`blog/${id}/${validTitle(title)}`}>
-      <article className={`${style.articleThumbnail} border w-100 bg-lighter`}>
+      <article className={`${style.articleThumbnail} shadow w-100 bg-lighter`}>
         <div className={`${style.img} h-50 mb-3 flex-center position-relative`}>
           <img className="w-100" src={`${API}/${img}`} alt="" />
           <div

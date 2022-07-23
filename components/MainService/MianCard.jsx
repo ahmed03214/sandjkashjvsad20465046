@@ -9,7 +9,7 @@ const MianCard = ({ body, title, img, bottomImg = false, bg }) => {
     <div
       className={`${style.bottomHeader}  ${
         !bg ? style.bgWhite : ""
-      } position-relative rounded border py-4 mt-4`}
+      } position-relative rounded shadow py-4 mt-4`}
     >
       {bg && (
         <div className="backdrop top-0 back-index position-absolute w-100 h-100">
