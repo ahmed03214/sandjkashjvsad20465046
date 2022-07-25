@@ -290,41 +290,4 @@
       }
     }
   }
-
-  .toTopBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    transform: translateX(calc(100% + 20px));
-    width: 55px;
-    height: 55px;
-    padding: 10px;
-    background-color: $main-color;
-    z-index: 999999;
-    font-size: 25px;
-    font-weight: 700;
-    border-radius: 50%;
-
-    &.active {
-      animation: showbtn 0.4s forwards;
-
-      @keyframes showbtn {
-        50% {
-          transform: translateX(-80%);
-        }
-        60% {
-          transform: translateX(-30%);
-        }
-        70% {
-          transform: translateX(20px);
-        }
-        90% {
-          transform: translateX(-20px);
-        }
-        100% {
-          transform: translateX(0);
-        }
-      }
-    }
-  }
 }

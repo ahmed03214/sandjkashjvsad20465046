@@ -6,6 +6,30 @@
   overflow: hidden;
   position: relative;
 
+  .serviceData {
+    position: relative;
+
+    &::after {
+      content: attr(aria-label);
+      opacity: 0;
+      padding: 8px;
+      position: absolute;
+      left: 0;
+      top: 115%;
+      white-space: nowrap;
+      z-index: 20px;
+      background-color: #333;
+      border-radius: 8px;
+      color: #fff;
+      transition: 0.4s;
+      font-size: 0.8em;
+    }
+  }
+
+  &:hover .serviceData:after {
+    opacity: 1;
+  }
+
   h2,
   p,
   img {
@@ -131,6 +155,7 @@
 
     .marker {
       width: 45px;
+      min-width: 45px;
     }
   }
 
