@@ -74,7 +74,7 @@ const AdsMangement = ({ mainData, service }) => {
                     className={style.itemsNetFirst}
                     itemClassName="border py-2 px-3 w-100 justify-content-start"
                     items={service.sections[1].items}
-                    color="blue"
+                    mark="/assets/landing/advantages-icons/icon4.webp"
                   />
                 </main>
               </div>
@@ -148,7 +148,7 @@ const AdsMangement = ({ mainData, service }) => {
                           <div className={`${style.marker} flex-end`}>
                             <img
                               className="w-100 rounded-circle"
-                              src={`/assets/how-are-we/advantages-logo/icon3.webp`}
+                              src="/assets/landing/advantages-icons/icon4.webp"
                               alt="logo"
                             />
                           </div>

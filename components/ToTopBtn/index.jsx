@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import style from "../../styles/landing.module.scss";
-
 import { AiOutlineArrowUp } from "react-icons/ai";
 
 const ToTopBtn = () => {
@@ -28,8 +26,8 @@ const ToTopBtn = () => {
   return (
     <div
       onClick={scrollToTop}
-      className={`${style.toTopBtn} ${
-        isActive ? style.active : ""
+      className={`toTopBtn ${
+        isActive ? "active" : ""
       } flex-center cu-pointer text-light`}
     >
       <AiOutlineArrowUp />

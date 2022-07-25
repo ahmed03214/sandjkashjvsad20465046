@@ -89,7 +89,7 @@ const GraphicDesign = ({ mainData, service }) => {
                     className={style.itemsNetFirst}
                     itemClassName="justify-content-start border py-2 px-3 w-100"
                     items={service.sections[1].items}
-                    color="red"
+                    mark="/assets/landing/advantages-icons/icon6.webp"
                   />
                 </main>
               </div>
@@ -135,7 +135,7 @@ const GraphicDesign = ({ mainData, service }) => {
                     className={`${style.itemsNetSecound} gap-3`}
                     itemClassName={`${style.itemM0} justify-content-start border py-2 px-3 w-100`}
                     items={service.sections[3].items}
-                    color="blue"
+                    mark="/assets/landing/advantages-icons/icon5.webp"
                   />
                 </main>
               </div>

@@ -24,7 +24,7 @@ const ServiceCard = ({
         <div className="logo mb-4">
           <img width={70} src="/assets/landing/service-card-icon.webp" alt="" />
         </div>
-        <div className="data">
+        <div aria-label={name} className={`data ${style.serviceData}`}>
           <p className="name h3 mb-4 text-cut">{name}</p>
           <p className="description text-cut-2 w-95 text-muted">{desc}</p>
         </div>

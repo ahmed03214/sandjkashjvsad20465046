@@ -8,7 +8,16 @@ const Items = ({
   color = "red",
   className = "",
   itemClassName = "",
+  mark,
 }) => {
+  const getMark = () => {
+    const markRepo = "/assets/how-are-we/advantages-logo";
+    const colorNum = color === "red" ? "2" : color === "blue" ? "3" : null;
+    const currentIcon = `icon${colorNum}.webp`;
+
+    return mark ? mark : `${markRepo}/${currentIcon}`;
+  };
+
   return (
     <ul className={`${className} list-unstyled mt-5`}>
       {items.map((item, idx) => (
@@ -17,13 +26,7 @@ const Items = ({
           className={`item ${itemClassName} w-fit my-3 flex-center gap-3`}
         >
           <div className={`${style.marker} flex-end`}>
-            <img
-              className="w-100 rounded-circle"
-              src={`/assets/how-are-we/advantages-logo/icon${
-                color === "red" ? "2" : color === "blue" ? "3" : ""
-              }.webp`}
-              alt="logo"
-            />
+            <img className="w-100 rounded-circle" src={getMark()} alt="logo" />
           </div>
           <li className="fw-bold">
             <p className="m-0">{item.item || item}</p>
