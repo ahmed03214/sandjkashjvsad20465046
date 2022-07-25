@@ -13,7 +13,6 @@ import Head from "next/head";
 import AdvantageCard from "../components/AdvantageCard";
 import CustomersOpinions from "../components/CustomersOpinions";
 import ContactUsSection from "../components/ContactUsSection";
-import ToTopBtn from "../components/ToTopBtn";
 
 import getMainData from "../utils/getMainData";
 
@@ -338,8 +337,6 @@ const Landing = ({ mainData }) => {
         </section>
 
         <ContactUsSection />
-
-        <ToTopBtn />
       </Layout>
     </>
   );
