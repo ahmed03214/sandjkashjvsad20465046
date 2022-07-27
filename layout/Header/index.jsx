@@ -13,8 +13,8 @@ const Taps = [
   },
   {
     title: "خدمتنا",
-    sub: true,
     route: "/services",
+    sub: true,
   },
   {
     title: "من نحن",
@@ -32,45 +32,15 @@ const Taps = [
     title: "انضم الينا",
     route: "/join",
   },
-];
-
-const services = [
   {
-    title: "خطط واستراتيجيات التسويق الرقمية",
-    route: "/services/1",
+    title: "سياسة الخصوصية",
+    route: "/privacy-policy",
+    hidden: true,
   },
   {
-    title: "كتابة محتوى تسويقي",
-    sub: true,
-    route: "/services/2",
-  },
-  {
-    title: "إدارة منصات التواصل الإجتماعي",
-    route: "/services/3",
-  },
-  {
-    title: "تصميم تطبيقات الجوال",
-    route: "/services/4",
-  },
-  {
-    title: "تصميم متاجر إلكترونيه",
-    route: "/services/5",
-  },
-  {
-    title: "تحسين محركات البحث",
-    route: "/services/6",
-  },
-  {
-    title: "التصميم الجرافيكي",
-    route: "/services/7",
-  },
-  {
-    title: "تصميم مواقع",
-    route: "/services/8",
-  },
-  {
-    title: "اخر",
-    route: "/services",
+    title: "شروط الاستخدام",
+    route: "/terms-of-use",
+    hidden: true,
   },
 ];
 
@@ -120,45 +90,50 @@ const Header = ({ services }) => {
             className="btn-close d-md-none mt-3 mb-2 cu-pointer mx-4 me-auto d-block"
           />
           <ul className="d-flex flex-column flex-md-row list-unstyled gap-2 m-0 h-100">
-            {Taps.map(({ title, route, sub }, idx) => (
-              <li
-                className={`${sub ? style.services : ""} ${
-                  style.tapContainer
-                } flex-center me-md-3 p-md-0 p-3`}
-                key={idx}
-              >
-                <Link href={route}>
-                  <p
-                    className={`${style.tapNav} m-0 cu-pointer ${
-                      getCurrentTap() === title ? style.activeTapNav : ""
-                    }`}
+            {Taps.map(
+              ({ title, route, sub, hidden }, idx) =>
+                !hidden && (
+                  <li
+                    className={`${sub ? style.services : ""} ${
+                      style.tapContainer
+                    } flex-center me-md-3 p-md-0 p-3`}
+                    key={idx}
                   >
-                    {title}
-                  </p>
-                </Link>
+                    <Link href={route}>
+                      <p
+                        className={`${style.tapNav} m-0 cu-pointer ${
+                          getCurrentTap() === title ? style.activeTapNav : ""
+                        }`}
+                      >
+                        {title}
+                      </p>
+                    </Link>
 
-                {sub && (
-                  <article className={`${style.servicesList} border`}>
-                    <ul>
-                      {services.slice(0, 8).map(({ name, id }, idx) => (
-                        <Link key={idx} href={`/services/${id}/${name}`}>
-                          <li className="list-unstyled cu-pointer m-3">
-                            {name}
-                          </li>
-                        </Link>
-                      ))}
-                      <Link href="/services">
-                        <li className="list-unstyled cu-pointer m-3">اخر</li>
-                      </Link>
-                    </ul>
-                  </article>
-                )}
-              </li>
-            ))}
+                    {sub && (
+                      <article className={`${style.servicesList} border`}>
+                        <ul>
+                          {services.slice(0, 8).map(({ name, id }, idx) => (
+                            <Link key={idx} href={`/services/${id}/${name}`}>
+                              <li className="list-unstyled cu-pointer m-3">
+                                {name}
+                              </li>
+                            </Link>
+                          ))}
+                          <Link href="/services">
+                            <li className="list-unstyled cu-pointer m-3">
+                              اخر
+                            </li>
+                          </Link>
+                        </ul>
+                      </article>
+                    )}
+                  </li>
+                )
+            )}
           </ul>
         </nav>
 
-        {/* // Navbar Backdrop */}
+        {/* Navbar Backdrop */}
         {isOpen && (
           <div
             onClick={closeNavbar}
@@ -181,7 +156,7 @@ const Header = ({ services }) => {
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
-            <p>{getCurrentTap()}</p>
+            <p className="mt-1">{getCurrentTap()}</p>
           </button>
         </div>
       </div>
