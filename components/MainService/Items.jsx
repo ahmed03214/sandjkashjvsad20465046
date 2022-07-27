@@ -9,6 +9,7 @@ const Items = ({
   className = "",
   itemClassName = "",
   mark,
+  mt = 5,
 }) => {
   const getMark = () => {
     const markRepo = "/assets/how-are-we/advantages-logo";
@@ -19,7 +20,7 @@ const Items = ({
   };
 
   return (
-    <ul className={`${className} list-unstyled mt-5`}>
+    <ul className={`${className} list-unstyled mt-${mt}`}>
       {items.map((item, idx) => (
         <div
           key={idx}

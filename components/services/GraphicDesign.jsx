@@ -38,7 +38,7 @@ const GraphicDesign = ({ mainData, service }) => {
               <div className="container">
                 <header>
                   <Heading
-                    className="text-center"
+                    className="text-center mt-3"
                     color="#000"
                     orderList="/assets/services/design/logo.webp"
                   >
