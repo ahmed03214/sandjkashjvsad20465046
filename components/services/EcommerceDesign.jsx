@@ -68,7 +68,7 @@ const EcommerceDesign = ({ mainData, service }) => {
                   >
                     {service.sections[0].title}
                   </Heading>
-                  <div className="body row mt-4">
+                  <div className="body row flex-center mt-4">
                     <div className="col-lg-6">
                       <div className="img d-lg-flex d-none w-100">
                         <img
@@ -90,7 +90,7 @@ const EcommerceDesign = ({ mainData, service }) => {
                     {service.sections[0].title2}
                   </h4>
                   <div className="body mt-4 pt-2">
-                    {service.sections[0].body.map((body, idx) => (
+                    {service.sections[0].body2.map((body, idx) => (
                       <p key={idx} className="font-bold fw-bold mt-2">
                         {body}
                       </p>
