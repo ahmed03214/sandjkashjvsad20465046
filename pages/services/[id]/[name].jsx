@@ -383,6 +383,8 @@ export const getServerSideProps = async ({ params }) => {
 
   const { data: service } = await axios(`${API}/api/get/getServiceById/${id}`);
 
+  console.log(service);
+
   if (service.code != 200) {
     return {
       redirect: {

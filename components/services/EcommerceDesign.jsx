@@ -112,7 +112,7 @@ const EcommerceDesign = ({ mainData, service }) => {
                     {service.sections[1].title2}
                   </Heading>
 
-                  <SliceItems items={service.sections[1].items2} />
+                  <SliceItems items={service.sections[1].item2} />
                 </div>
               </div>
 

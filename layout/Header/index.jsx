@@ -62,7 +62,7 @@ const Header = ({ services }) => {
 
     const tap = Taps.find((tap) => tap.route === route);
 
-    return tap?.title || "";
+    return tap?.title || "تصفح";
   };
 
   return (

@@ -44,7 +44,7 @@ const DigitalDesign = ({ mainData, service }) => {
                     orderList="/assets/how-are-we/advantages-logo/icon3.webp"
                     rounded
                   >
-                    {service.sections[0].title}
+                    من الرؤية إلى الواقع
                   </Heading>
 
                   <div className="body mt-4 pt-2">

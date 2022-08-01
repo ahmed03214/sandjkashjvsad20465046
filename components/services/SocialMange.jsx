@@ -11,6 +11,7 @@ import style from "../../styles/services.module.scss";
 import Items from "../../components/MainService/Items";
 
 const SocialMange = ({ mainData, service }) => {
+  console.log(service);
   return (
     <Layout
       social={mainData.social}
