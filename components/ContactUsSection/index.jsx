@@ -16,11 +16,6 @@ const ContactUsSection = ({
         {header && (
           <header className="text-center pb-3">
             <h2>تواصل معنا</h2>
-            <p className="text-muted small">
-              ينما يستثمر الناس في ترقية أنماط الحياة نستثمر نحن في المقدرة على
-              تحقيقه بينما يستثمر الناس في ترقية أنماط الحياة نستثمر نحن في
-              المقدرة على تحقيقها
-            </p>
           </header>
         )}
 

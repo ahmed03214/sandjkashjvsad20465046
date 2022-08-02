@@ -99,7 +99,7 @@ const MobileApp = ({ mainData, service }) => {
               </section>
 
               <section
-                className={`${style.bodyContainer} rounded shadow pt-1 mt-4`}
+                className={`${style.bodyContainer} rounded shadow pt-1 mt-4 pb-3`}
               >
                 <div className="container">
                   <Heading
@@ -110,15 +110,6 @@ const MobileApp = ({ mainData, service }) => {
                   </Heading>
 
                   <Items items={service.sections[1].items} />
-
-                  <Heading
-                    color="#B84A85"
-                    className="title mb-3 mt-4 pt-4 font-bold fw-bold"
-                  >
-                    {service.sections[1].title3}
-                  </Heading>
-
-                  <SliceItems items={service.sections[1].items2} />
                 </div>
               </section>
 

@@ -40,13 +40,13 @@ const AdsMangement = ({ mainData, service }) => {
                   <Heading className="text-center" color="#B84A85">
                     {service.sections[0].title}
                   </Heading>
-                  <h5 className="text-center">
+                  <h5 className="text-center text-muted">
                     {service.sections[0].helpTitle}
                   </h5>
                 </header>
 
                 <main>
-                  <div className="net flex-between align-items-start">
+                  <div className="net flex-between align-items-start text-center">
                     <div className="info mt-2 p-0 mt-md-5">
                       <p>{service.sections[0].body}</p>
                     </div>
@@ -83,7 +83,7 @@ const AdsMangement = ({ mainData, service }) => {
             <div className={`${style.bodyContainer} rounded shadow py-4 mt-4`}>
               <div className="container">
                 <main>
-                  <div className="net flex-center gap-3 align-items-start">
+                  <div className="net flex-center gap-3">
                     <div className="img d-md-flex d-none w-100">
                       <img
                         src="/assets/services/adsMange/sections/section2.webp"

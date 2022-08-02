@@ -101,10 +101,10 @@ const GraphicDesign = ({ mainData, service }) => {
                   <div className="net flex-between align-items-start">
                     <div className="info mt-2 p-0 mt-md-5">
                       <Heading color="#000">
-                        {service.sections[0].title}
+                        {service.sections[2].title}
                       </Heading>
 
-                      <p className="mb-3 text-muted lh-lg">
+                      <p className="mb-3 text-muted lh-lg text-center">
                         {service.sections[2].body}
                       </p>
                     </div>

@@ -40,13 +40,17 @@ const Writing = ({ mainData, service }) => {
 
                 const currentSection = service[key];
 
+                console.log(currentSection.body, idx);
+
                 return (
                   <section key={idx} className="mb-5">
-                    <Heading color={idx === 3 ? "#4A73CB" : "#B84A85"}>
-                      {currentSection.title}
-                    </Heading>
+                    {idx !== 7 && (
+                      <Heading color={idx === 3 ? "#4A73CB" : "#B84A85"}>
+                        {currentSection.title}
+                      </Heading>
+                    )}
 
-                    {currentSection.body && (
+                    {currentSection.body && idx !== 7 && (
                       <div
                         className="content"
                         dangerouslySetInnerHTML={{

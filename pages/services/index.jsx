@@ -35,7 +35,7 @@ const Services = ({ mainData }) => {
             <div className={`${style.info}`}>
               <h2>خدماتنا</h2>
               <p className="text-muted">
-                لأننا نؤمن أن وجود إستراتيجية تسويقية صحيحة أم ٌر هام، إذ من
+                لأننا نؤمن أن وجود إستراتيجية تسويقية صحيحة أمرً هام، إذ من
                 خلالها يمكن رسم خريطة الوصول إلى تحقيق النجاح وإزدهار الأعمال
               </p>
             </div>
@@ -46,8 +46,6 @@ const Services = ({ mainData }) => {
           </header>
 
           <main className={`${style.main}`}>
-            <h2 className="mb-4 font-bold">ماذا سنقدم لك في يمناك</h2>
-
             <div className="row">
               {mainData.services.map((service, idx) => (
                 <div

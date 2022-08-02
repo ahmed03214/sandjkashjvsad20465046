@@ -12,6 +12,7 @@ import MainFotterServices from "../MainFotterServices";
 import Heading from "../MainService/Heading";
 
 const SEO = ({ mainData, service }) => {
+  console.log(service.sections);
   return (
     <Layout
       social={mainData.social}
@@ -48,7 +49,7 @@ const SEO = ({ mainData, service }) => {
                   </Heading>
 
                   <div className="body text-center mt-4 font-bold fw-bold">
-                    {service.sections[0].body}
+                    {service.sections[0].body.replaceAll("|||", "")}
                   </div>
                 </div>
               </div>
@@ -63,14 +64,6 @@ const SEO = ({ mainData, service }) => {
                   >
                     {service.sections[1].title}
                   </Heading>
-
-                  <div className="body">
-                    {service.sections[1].body.map((body, idx) => (
-                      <p key={idx} className="font-bold fw-bold mt-4">
-                        {body}
-                      </p>
-                    ))}
-                  </div>
 
                   <div className="row align-items-center">
                     <div className="col-lg-6">

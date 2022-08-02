@@ -61,8 +61,17 @@ const SocialMange = ({ mainData, service }) => {
 
             <div className={`${style.bodyContainer} rounded shadow py-4 mt-4`}>
               <div className="container">
-                <h5>{service.sections[1].title}</h5>
+                <h5 className="fw-bold">{service.sections[1].title}</h5>
                 <p className="text-muted small">{service.sections[1].body} </p>
+              </div>
+            </div>
+
+            <div className={`${style.bodyContainer} rounded shadow py-4 mt-4`}>
+              <div className="container">
+                <h5 className="fw-bold">{service.sections[3].title}</h5>
+                <p className="small text-muted">{service.sections[3].muted}</p>
+
+                <Items color="blue" items={service.sections[3].items} />
               </div>
             </div>
 
@@ -78,7 +87,7 @@ const SocialMange = ({ mainData, service }) => {
                   </div>
 
                   <div className="info">
-                    <h5>{service.sections[4].title}</h5>
+                    <h5 className="fw-bold">{service.sections[4].title}</h5>
                     <p className="small text-muted">
                       {service.sections[4].muted}
                     </p>
@@ -90,28 +99,6 @@ const SocialMange = ({ mainData, service }) => {
                     />
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div className={`${style.bodyContainer} rounded shadow py-4 mt-4`}>
-              <div className="container">
-                <h5>{service.sections[3].title}</h5>
-                <p className="small text-muted">{service.sections[3].muted}</p>
-
-                <Items color="blue" items={service.sections[3].items} />
-              </div>
-            </div>
-
-            <div className={`${style.bodyContainer} rounded shadow py-4 mt-4`}>
-              <div className="container">
-                <h5>{service.sections[4].title}</h5>
-                <p className="small text-muted">{service.sections[4].muted}</p>
-
-                <Items
-                  muted
-                  color="blue"
-                  items={service.sections[4].itemsWithMuted}
-                />
               </div>
             </div>
           </div>
