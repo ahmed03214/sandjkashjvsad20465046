@@ -40,6 +40,11 @@ button {
   border-radius: 20px;
 }
 
+::selection {
+  background-color: #b84a85;
+  color: #fff;
+}
+
 // hide map ads
 .leaflet-bottom.leaflet-right {
   display: none;
