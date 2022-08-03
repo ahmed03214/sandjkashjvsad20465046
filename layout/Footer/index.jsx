@@ -22,7 +22,7 @@ const taps = [
         route: "/",
       },
       {
-        title: "خدمتنا",
+        title: "خدماتنا",
         route: "/services",
       },
       {
@@ -124,7 +124,7 @@ const Footer = ({ social }) => {
         </div>
 
         <p className="text-light text-center m-0 mt-5 pb-3">
-          جميع الحقوق محفوظه لدي يمناك 2022©
+          جميع الحقوق محفوظه لدى يمناك 2022©
         </p>
       </div>
     </footer>

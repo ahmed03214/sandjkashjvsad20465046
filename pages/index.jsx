@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useMemo, useRef } from "react";
 
 import style from "../styles/landing.module.scss";
 
@@ -74,6 +74,19 @@ const Landing = ({ mainData }) => {
       behavior: "smooth",
     });
   };
+
+  const services = useMemo(
+    () =>
+      mainData.services.filter((service) => {
+        return (
+          service.id == 1 ||
+          service.id == 2 ||
+          service.id == 7 ||
+          service.id == 8
+        );
+      }),
+    [mainData]
+  );
 
   return (
     <>
@@ -168,7 +181,7 @@ const Landing = ({ mainData }) => {
             </div>
 
             <div className={`${style.serviceCardNet} gap-4 me-md-5`}>
-              {mainData.services.slice(0, 4).map((service, idx) => (
+              {services.map((service, idx) => (
                 <ServiceCard
                   key={idx}
                   id={service.id}

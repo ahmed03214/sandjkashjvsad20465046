@@ -61,7 +61,7 @@ const Contact = ({ mainData }) => {
           <main className={`${style.main}`}>
             <div className={`${style.mapContainer} border`}>
               <div className={`${style.mapParent}`}>
-                <Map coordinates={[30.009043710650083, 31.234041795569244]} />
+                <Map coordinates={[18.304476050827628, 42.702573151926934]} />
               </div>
             </div>
 

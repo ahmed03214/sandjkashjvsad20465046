@@ -12,7 +12,7 @@ const Taps = [
     route: "/",
   },
   {
-    title: "خدمتنا",
+    title: "خدماتنا",
     route: "/services",
     sub: true,
   },
